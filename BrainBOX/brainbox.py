@@ -1,4 +1,4 @@
-from NeuroPy import NeuroPy
+from NeuroPy import NeuroPy # Here NeuroPy.py file is imported.
 import pyautogui as pi
 from win32api import GetSystemMetrics
 import pytweening
@@ -14,7 +14,7 @@ def map(x, oFrom, oTo, nFrom, nTo):
 print("Width =", GetSystemMetrics(0))
 print("Height =", GetSystemMetrics(1))
 print("Connecting")
-ob = NeuroPy("COM8")
+ob = NeuroPy("COM8") # Here give the COM port to which any bluetooth device will be connected
 print("Connected")
 ob.start()
 print("started")
@@ -24,8 +24,8 @@ flag=1
 lastAttention = 0
 print("beta gamma alpha--", ob.highBeta, ob.lowGamma, ob.attention)
 i=0
-account_sid = 'AC0f1740dc01c6053984534124f3e1c5fd'
-auth_token = 'fddb95928a64d151a884e049d7925921'
+account_sid = '##Your SID in Twillio account##'
+auth_token = 'The authentication token'
 
 client = Client(account_sid, auth_token)
 while(True):
